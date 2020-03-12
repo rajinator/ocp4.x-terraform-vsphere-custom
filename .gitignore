@@ -1,4 +1,11 @@
 dependencies/*
 install-config/.openshift_install_state.json
 install-config/.openshift_install.log
+install-config/auth/*
+install-config/bootstrap.ign
+install-config/master.ign
+install-config/worker.ign
 sample-files/custom-install-config.yaml
+terraform-installer/terraform.tfvars
+terraform-installer/terraform.tfvars.example
+terraform-installer/terraform-sanitize.tfvars.example
