@@ -32,9 +32,9 @@ resource "vsphere_virtual_machine" "vm" {
 
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
-    use_static_mac = "${ var.usestaticmac == "true" ? true : false }"
+    use_static_mac = "${ var.usestaticmac == "true" ? "true" : "false" }"
     //uncomment the following line to use static macs, static mac addresses must be specified in tfvars
-    mac_address = "${var.macaddrstatic}"
+    mac_address = "${ var.usestaticmac == "true" ? "${var.macaddrstatic[count.index]}" : "" }"
   }
 
   disk {

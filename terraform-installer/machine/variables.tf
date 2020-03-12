@@ -60,6 +60,9 @@ variable "ip_addresses" {
   type = "list"
 }
 
+variable "usestaticmac" {
+  type = "string"
+}
 variable "macaddrstatic" {
   type = "list"
 }
