@@ -7,5 +7,5 @@ install-config/master.ign
 install-config/worker.ign
 sample-files/custom-install-config.yaml
 terraform-installer/terraform.tfvars
-terraform-installer/terraform.tfvars.example
+#terraform-installer/terraform.tfvars.example
 terraform-installer/terraform-sanitize.tfvars.example
