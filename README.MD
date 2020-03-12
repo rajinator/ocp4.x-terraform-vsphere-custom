@@ -1,5 +1,5 @@
 # Openshift installer for vSphere with Customizations
-- ## Customizations list:
+ ## Customizations list:
     - Static IPs
     - Static MAC address for DHCP reservations
     - Hostname start index at 1 for non bootstrap nodes
