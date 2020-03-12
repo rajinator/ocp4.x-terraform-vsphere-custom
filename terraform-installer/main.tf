@@ -52,6 +52,7 @@ module "bootstrap" {
   ipam             = "${var.ipam}"
   ipam_token       = "${var.ipam_token}"
   ip_addresses     = ["${compact(list(var.bootstrap_ip))}"]
+  usestaticmac     = true
   macaddrstatic    = ["${compact(list(var.bootstrap_mac))}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"
@@ -76,6 +77,7 @@ module "control_plane" {
   ipam             = "${var.ipam}"
   ipam_token       = "${var.ipam_token}"
   ip_addresses     = ["${var.control_plane_ips}"]
+  usestaticmac     = true
   macaddrstatic    = ["${var.control_plane_macs}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"
@@ -100,6 +102,7 @@ module "compute" {
   ipam             = "${var.ipam}"
   ipam_token       = "${var.ipam_token}"
   ip_addresses     = ["${var.compute_ips}"]
+  usestaticmac     = true
   macaddrstatic    = ["${var.compute_macs}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"

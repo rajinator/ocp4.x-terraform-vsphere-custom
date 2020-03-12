@@ -16,7 +16,7 @@ data "vsphere_virtual_machine" "template" {
 resource "vsphere_virtual_machine" "vm" {
   count = "${var.instance_count}"
 
-  name             = "${var.name}-${count.index}"
+  name             = "${var.name == "bootstrap" ? "${var.name}" : "${var.name}${count.index+1}"}"
   resource_pool_id = "${var.resource_pool_id}"
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
   num_cpus         = "${var.num_cpu}"
@@ -32,9 +32,9 @@ resource "vsphere_virtual_machine" "vm" {
 
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
-    use_static_mac = "${ var.macaddrstatic == "" ? false : true }"
+    use_static_mac = "${ var.usestaticmac == "true" ? true : false }"
     //uncomment the following line to use static macs, static mac addresses must be specified in tfvars
-    //mac_address = "${ var.macaddrstatic }"
+    mac_address = "${var.macaddrstatic}"
   }
 
   disk {
