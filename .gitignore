@@ -1,0 +1,4 @@
+dependencies/*
+install-config/.openshift_install_state.json
+install-config/.openshift_install.log
+sample-files/custom-install-config.yaml

@@ -1,0 +1,13 @@
+apiVersion: v1
+baseDomain: example.com
+metadata:
+  name: test #cluster name, this effectively makes fqdn of nodes have fqdns like bootstrap.test.example.com
+platform:
+  vSphere:
+    vCenter: your.vcenter.server
+    username: "username"
+    password: "password!"
+    datacenter: datacenter
+    defaultDatastore: datastore
+pullsecret: '{"auths":{"cloud.openshift.com":{"auth":"..."}}}'
+sshKey: 'ssh-rsa AA... ocp4-key'
