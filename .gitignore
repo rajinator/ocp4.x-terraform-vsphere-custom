@@ -5,6 +5,8 @@ install-config/auth/*
 install-config/bootstrap.ign
 install-config/master.ign
 install-config/worker.ign
+install-config/install-config.yaml
+install-config/metadata.json
 sample-files/custom-install-config.yaml
 terraform-installer/terraform.tfvars
 terraform-installer/.terraform

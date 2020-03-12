@@ -56,8 +56,8 @@ module "bootstrap" {
   macaddrstatic    = ["${compact(list(var.bootstrap_mac))}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"
-  num_cpu          = "2"
-  num_sockets      = "2"
+  num_cpu          = "4"
+  num_sockets      = "1"
   memlimit         = "16384"
 }
 
@@ -81,8 +81,8 @@ module "control_plane" {
   macaddrstatic    = ["${var.control_plane_macs}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"
-  num_cpu          = "2"
-  num_sockets      = "2"
+  num_cpu          = "4"
+  num_sockets      = "1"
   memlimit         = "16384"
 }
 
@@ -106,8 +106,8 @@ module "compute" {
   macaddrstatic    = ["${var.compute_macs}"]
   machine_cidr     = "${var.machine_cidr}"
   memory           = "16384"
-  num_cpu          = "2"
-  num_sockets      = "2"
+  num_cpu          = "4"
+  num_sockets      = "1"
   memlimit         = "16384"
 }
 
